@@ -7,7 +7,6 @@ import org.example.matricula.repo.IGenericRepo;
 import org.example.matricula.service.IStudentService;
 import org.springframework.stereotype.Service;
 
-import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Collectors;

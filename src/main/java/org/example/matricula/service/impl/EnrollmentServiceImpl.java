@@ -11,9 +11,6 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 import java.util.stream.Collectors;
 
-import static java.util.stream.Collectors.groupingBy;
-
-
 @Service
 @RequiredArgsConstructor
 public class EnrollmentServiceImpl extends CRUDImpl<Enrollment, Integer> implements IEnrollmentService {

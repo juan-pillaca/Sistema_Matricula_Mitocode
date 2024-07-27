@@ -6,7 +6,6 @@ import org.example.matricula.dto.CareerDTO;
 import org.example.matricula.model.Career;
 import org.example.matricula.service.ICareerService;
 import org.example.matricula.util.MapperUtil;
-import org.modelmapper.ModelMapper;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
