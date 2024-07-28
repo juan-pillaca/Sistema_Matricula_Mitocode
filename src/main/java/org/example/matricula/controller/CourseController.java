@@ -22,26 +22,26 @@ public class CourseController {
 
     @GetMapping
     public ResponseEntity<List<CourseDTO>> readAll() throws Exception{
-        List<CourseDTO> list = mapperUtil.mapList(service.readAll(), CourseDTO.class);
+        List<CourseDTO> list = mapperUtil.mapList(service.readAll(), CourseDTO.class,"courseMapper");
         return ResponseEntity.ok(list);
     }
 
     @GetMapping("/{id}")
     public ResponseEntity<CourseDTO> readById(@PathVariable("id") int id) throws Exception{
-        CourseDTO obj = mapperUtil.map(service.readById(id), CourseDTO.class);
+        CourseDTO obj = mapperUtil.map(service.readById(id), CourseDTO.class,"courseMapper");
         return ResponseEntity.ok(obj);
     }
 
     @PostMapping
     public ResponseEntity<CourseDTO> save(@Valid @RequestBody CourseDTO dto) throws Exception{
-        Course obj = service.save(mapperUtil.map(dto, Course.class));
-        return new ResponseEntity<>(mapperUtil.map(obj, CourseDTO.class),HttpStatus.CREATED);
+        Course obj = service.save(mapperUtil.map(dto, Course.class,"courseMapper"));
+        return new ResponseEntity<>(mapperUtil.map(obj, CourseDTO.class,"courseMapper"),HttpStatus.CREATED);
     }
 
     @PutMapping("/{id}")
     public ResponseEntity<CourseDTO> update(@Valid @PathVariable("id")int id, @RequestBody CourseDTO dto) throws Exception{
-        Course obj = service.update(mapperUtil.map(dto, Course.class), id);
-        return ResponseEntity.ok(mapperUtil.map(obj, CourseDTO.class));
+        Course obj = service.update(mapperUtil.map(dto, Course.class,"courseMapper"), id);
+        return ResponseEntity.ok(mapperUtil.map(obj, CourseDTO.class,"courseMapper"));
     }
 
     @DeleteMapping("/{id}")

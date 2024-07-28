@@ -26,10 +26,10 @@ public class Student {
     @Column(length = 80, nullable = false)
     private String lastName;
 
-    @Column(length = 20, nullable = false)
+    @Column(length = 50, nullable = false)
     private LocalDate birthDate;
 
-    @Column(length = 8, nullable = false, unique = true)
+    @Column(length = 8, nullable = false)
     private String cardId;
 
     @Column(length = 9, nullable = false)

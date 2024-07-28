@@ -1,14 +1,11 @@
 package org.example.matricula.dto;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
-import jakarta.validation.constraints.Email;
-import jakarta.validation.constraints.NotNull;
-import jakarta.validation.constraints.Pattern;
-import jakarta.validation.constraints.Size;
+import jakarta.validation.constraints.*;
+
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-
 import java.time.LocalDate;
 
 @Data
@@ -28,7 +25,6 @@ public class StudentDTO {
     private String lastName;
 
     @NotNull
-    @Size(min = 3, max = 20)
     private LocalDate birthDate;
 
     @NotNull
